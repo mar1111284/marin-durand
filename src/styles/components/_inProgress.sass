@@ -1,0 +1,15 @@
+.inProgress-container
+    @include width-height(100vw,70vh)
+    @include flexbox(column, center,center)
+    padding: 2rem
+
+    div
+        max-width: 80rem
+        @include flexbox(column, center, flex-start, 2rem)
+
+        h2
+            @include set-font(black,Poppins, 1.8rem, bold,normal )
+        
+        p
+            @include set-font(black,Poppins, 1.6rem, 400,normal )
+            letter-spacing: 0.12rem
