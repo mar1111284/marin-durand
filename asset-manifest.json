@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/marin-durand/static/css/main.1d7de0bc.css",
+    "main.js": "/marin-durand/static/js/main.e57ee5b1.js",
+    "static/js/453.d4ca5cd4.chunk.js": "/marin-durand/static/js/453.d4ca5cd4.chunk.js",
+    "index.html": "/marin-durand/index.html",
+    "main.1d7de0bc.css.map": "/marin-durand/static/css/main.1d7de0bc.css.map",
+    "main.e57ee5b1.js.map": "/marin-durand/static/js/main.e57ee5b1.js.map",
+    "453.d4ca5cd4.chunk.js.map": "/marin-durand/static/js/453.d4ca5cd4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d7de0bc.css",
+    "static/js/main.e57ee5b1.js"
+  ]
+}
