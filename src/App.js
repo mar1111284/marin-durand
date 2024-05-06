@@ -20,7 +20,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 
 const options = {
-  basename: "/",
+  basename: "/marin-durand",
 };
 
 // Layout
