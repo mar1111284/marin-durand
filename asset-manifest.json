@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/marin-durand/static/css/main.1d7de0bc.css",
-    "main.js": "/marin-durand/static/js/main.e57ee5b1.js",
+    "main.css": "/marin-durand/static/css/main.1deab4cb.css",
+    "main.js": "/marin-durand/static/js/main.68490528.js",
     "static/js/453.d4ca5cd4.chunk.js": "/marin-durand/static/js/453.d4ca5cd4.chunk.js",
+    "static/media/header-bg.jpg": "/marin-durand/static/media/header-bg.b3b20e8037a53a36b458.jpg",
+    "static/media/header-mockup.png": "/marin-durand/static/media/header-mockup.bbc6f9995cf9ff96cf25.png",
+    "static/media/step2.svg": "/marin-durand/static/media/step2.e7fd0478451b8d72ff9b93b1ea475b66.svg",
+    "static/media/step1.svg": "/marin-durand/static/media/step1.2e4a057b61e2034aa921006c6c3756f7.svg",
+    "static/media/step4.svg": "/marin-durand/static/media/step4.ee67c4d97d43c103242f4db5b15cd0f5.svg",
+    "static/media/step3.svg": "/marin-durand/static/media/step3.d9111c7b4b16e0658a307d63e7b72e42.svg",
     "index.html": "/marin-durand/index.html",
-    "main.1d7de0bc.css.map": "/marin-durand/static/css/main.1d7de0bc.css.map",
-    "main.e57ee5b1.js.map": "/marin-durand/static/js/main.e57ee5b1.js.map",
+    "main.1deab4cb.css.map": "/marin-durand/static/css/main.1deab4cb.css.map",
+    "main.68490528.js.map": "/marin-durand/static/js/main.68490528.js.map",
     "453.d4ca5cd4.chunk.js.map": "/marin-durand/static/js/453.d4ca5cd4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d7de0bc.css",
-    "static/js/main.e57ee5b1.js"
+    "static/css/main.1deab4cb.css",
+    "static/js/main.68490528.js"
   ]
 }
