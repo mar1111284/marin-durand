@@ -32,6 +32,10 @@
         .logo-container
             @include width-height(auto, 9rem)
             @include flexbox(row, flex-start, center)
+            p
+                @include set-font(Black,Poppins, 1.8rem, 400,normal )
+                margin-left: 2rem
+            
 
             .navbar-logo
                 @include width-height(20rem, auto)
@@ -75,6 +79,11 @@
             .menu-btn // Hide btn
                 display: none
 
+            // Logo
+            .logo-container
+                p
+                    margin-left: 0
+
             .links-container
                 @include flexbox(row, center,center, 2rem)
                 @include width-height(auto,100%)
@@ -113,6 +122,11 @@
 
             .menu-btn // Hide btn
                 display: none
+
+            // Logo
+            .logo-container
+                p
+                    margin-left: 0
 
             .links-container
                 @include flexbox(row, center,center, 2rem)

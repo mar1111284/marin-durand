@@ -1,1 +1,138 @@
 .page-container.home
+    .home-header
+        @include flexbox(column, center, center)
+        @include width-height(100vw, 100%)
+        flex: 1
+
+        .top-header
+            @include width-height(100%, 100%)
+            @include set-background-image('../assets/header-bg.jpg', center, cover)
+            @include flexbox(column, center, center, 5rem)
+            flex: 1
+            padding: 4rem 2.5rem
+
+            .header-left-container
+                @include width-height(100%, auto)
+                @include flexbox(column, center, flex-start, 2.25rem)
+                h1
+                    @include set-font(white,Poppins, 3.25rem, bold,normal )
+                    line-height: 4rem
+
+                    span
+                        @include set-font(white,Poppins, 3.25rem, bold,normal )
+                        color: black
+
+                h2
+                    @include set-font(White,Poppins, 1.8rem, 400,normal )
+                    letter-spacing: 0.1rem
+
+                .get-in-touch-btn
+                    background-color: #1e25a5
+                    padding: 1rem 1.5rem
+                    @include set-font(White,Poppins, 1.8rem, 400,normal )
+                    border-radius: 4px
+                    align-self: center
+
+            .header-mockup
+                @include width-height(100%, auto)
+
+        .bottom-header
+            @include width-height(100%, 100%)
+            @include flexbox(row, center, flex-start)
+            padding: 3rem 1.8rem
+            flex: 1
+
+@include respond(tablet)
+    .page-container.home
+        .home-header
+            @include flexbox(column, center, center)
+            @include width-height(100vw, 100%)
+            flex: 1
+
+            .top-header
+                @include width-height(100%, 100%)
+                @include set-background-image('../assets/header-bg.jpg', center, cover)
+                @include flexbox(column, center, center, 5rem)
+                flex: 1
+                padding: 4% 8%
+
+                .header-left-container
+                    @include width-height(100%, auto)
+                    @include flexbox(column, center, flex-start, 2.25rem)
+                    h1
+                        @include set-font(white,Poppins, 4rem, bold,normal )
+                        line-height: 4rem
+
+                        span
+                            @include set-font(white,Poppins, 4.25rem, bold,normal )
+                            color: black
+
+                    h2
+                        @include set-font(White,Poppins, 2.2rem, 400,normal )
+                        letter-spacing: 0.1rem
+
+                    .get-in-touch-btn
+                        background-color: #1e25a5
+                        padding: 1rem 1.5rem
+                        @include set-font(White,Poppins, 1.8rem, 400,normal )
+                        border-radius: 4px
+                        align-self: flex-start
+
+                .header-mockup
+                    @include width-height(100%, auto)
+
+            .bottom-header
+                @include width-height(100%, 100%)
+                @include flexbox(row, center, flex-start)
+                padding: 3rem 1.8rem
+                flex: 1
+
+            
+
+@include respond(desktop)
+    .page-container.home
+        .home-header
+            @include flexbox(column, center, center)
+            @include width-height(100vw, 100%)
+            flex: 1
+
+            .top-header
+                @include width-height(100%, 100%)
+                @include set-background-image('../assets/header-bg.jpg', center, cover)
+                @include flexbox(row, center, center, 5rem)
+                flex: 1
+                padding: 4% 15%
+
+                .header-left-container
+                    @include width-height(50%, auto)
+                    @include flexbox(column, center, flex-start, 2rem)
+                    h1
+                        @include set-font(white,Poppins, 4rem, bold,normal )
+                        line-height: 5.8rem
+
+                        span
+                            @include set-font(white,Poppins, 4.5rem, bold,normal )
+                            color: #3b43d6
+
+                    h2
+                        @include set-font(White,Poppins, 2rem, 300,normal )
+                        letter-spacing: 0.1rem
+
+                    .get-in-touch-btn
+                        background-color: #1e25a5
+                        padding: 1.25rem 2rem
+                        @include set-font(White,Poppins, 1.8rem, 300,normal )
+                        border-radius: 4px
+                        align-self: flex-start
+
+
+                .header-mockup
+                    @include width-height(50%, auto)
+
+            .bottom-header
+                @include width-height(70%, 100%)
+                @include flexbox(row, center, flex-start)
+                padding-top: 3rem
+                padding-bottom: 3rem
+                flex: 1
+                

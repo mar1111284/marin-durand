@@ -7,10 +7,9 @@
   cursor: default;
   margin: 0;
   padding: 0;
-  font-family: "Roboto";
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  overflow-x: hidden;
+  font-family: "Roboto";
 }
 
 html {
@@ -53,10 +52,6 @@ button {
 
 .visible {
   opacity: 1;
-}
-
-h2 {
-  font-size: 2rem;
 }
 
 .round {
@@ -116,6 +111,261 @@ h2 {
   padding-top: 9rem;
 }
 
+.page-container.home .home-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100vw;
+  height: 100%;
+  flex: 1;
+}
+.page-container.home .home-header .top-header {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/header-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex: 1;
+  padding: 4rem 2.5rem;
+}
+.page-container.home .home-header .top-header .header-left-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.25rem;
+}
+.page-container.home .home-header .top-header .header-left-container h1 {
+  color: white;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 3.25rem;
+  font-style: normal;
+  line-height: 4rem;
+}
+.page-container.home .home-header .top-header .header-left-container h1 span {
+  color: white;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 3.25rem;
+  font-style: normal;
+  color: black;
+}
+.page-container.home .home-header .top-header .header-left-container h2 {
+  color: White;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+}
+.page-container.home .home-header .top-header .header-left-container .get-in-touch-btn {
+  background-color: #1e25a5;
+  padding: 1rem 1.5rem;
+  color: White;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  border-radius: 4px;
+  align-self: center;
+}
+.page-container.home .home-header .top-header .header-mockup {
+  width: 100%;
+  height: auto;
+}
+.page-container.home .home-header .bottom-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  padding: 3rem 1.8rem;
+  flex: 1;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1025px) {
+  .page-container.home .home-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100vw;
+    height: 100%;
+    flex: 1;
+  }
+  .page-container.home .home-header .top-header {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/header-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex: 1;
+    padding: 4% 8%;
+  }
+  .page-container.home .home-header .top-header .header-left-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.25rem;
+  }
+  .page-container.home .home-header .top-header .header-left-container h1 {
+    color: white;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 4rem;
+    font-style: normal;
+    line-height: 4rem;
+  }
+  .page-container.home .home-header .top-header .header-left-container h1 span {
+    color: white;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 4.25rem;
+    font-style: normal;
+    color: black;
+  }
+  .page-container.home .home-header .top-header .header-left-container h2 {
+    color: White;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 2.2rem;
+    font-style: normal;
+    letter-spacing: 0.1rem;
+  }
+  .page-container.home .home-header .top-header .header-left-container .get-in-touch-btn {
+    background-color: #1e25a5;
+    padding: 1rem 1.5rem;
+    color: White;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+  .page-container.home .home-header .top-header .header-mockup {
+    width: 100%;
+    height: auto;
+  }
+  .page-container.home .home-header .bottom-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    padding: 3rem 1.8rem;
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .page-container.home .home-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100vw;
+    height: 100%;
+    flex: 1;
+  }
+  .page-container.home .home-header .top-header {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/header-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex: 1;
+    padding: 4% 15%;
+  }
+  .page-container.home .home-header .top-header .header-left-container {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .page-container.home .home-header .top-header .header-left-container h1 {
+    color: white;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 4rem;
+    font-style: normal;
+    line-height: 5.8rem;
+  }
+  .page-container.home .home-header .top-header .header-left-container h1 span {
+    color: white;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 4.5rem;
+    font-style: normal;
+    color: #3b43d6;
+  }
+  .page-container.home .home-header .top-header .header-left-container h2 {
+    color: White;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 2rem;
+    font-style: normal;
+    letter-spacing: 0.1rem;
+  }
+  .page-container.home .home-header .top-header .header-left-container .get-in-touch-btn {
+    background-color: #1e25a5;
+    padding: 1.25rem 2rem;
+    color: White;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1.8rem;
+    font-style: normal;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+  .page-container.home .home-header .top-header .header-mockup {
+    width: 50%;
+    height: auto;
+  }
+  .page-container.home .home-header .bottom-header {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    flex: 1;
+  }
+}
 .navigation-container {
   position: fixed;
   top: 0;
@@ -172,6 +422,14 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   gap: 0;
+}
+.navigation-container .navbar .logo-container p {
+  color: Black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  margin-left: 2rem;
 }
 .navigation-container .navbar .logo-container .navbar-logo {
   width: 20rem;
@@ -231,6 +489,9 @@ h2 {
   .navigation-container .navbar .menu-btn {
     display: none;
   }
+  .navigation-container .navbar .logo-container p {
+    margin-left: 0;
+  }
   .navigation-container .navbar .links-container {
     display: flex;
     flex-direction: row;
@@ -286,6 +547,9 @@ h2 {
   }
   .navigation-container .navbar .menu-btn {
     display: none;
+  }
+  .navigation-container .navbar .logo-container p {
+    margin-left: 0;
   }
   .navigation-container .navbar .links-container {
     display: flex;
@@ -356,4 +620,161 @@ h2 {
   font-size: 1.6rem;
   font-style: normal;
   letter-spacing: 0.12rem;
+}
+
+.steps-components {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.steps-components .steps-components-title {
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 2.5rem;
+  font-style: normal;
+  margin: 2rem;
+}
+.steps-components .step {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  width: auto;
+  height: auto;
+  background-color: rgb(230, 230, 230);
+  border-radius: 6px;
+  padding: 2rem 2rem;
+  flex: 1;
+}
+.steps-components .step .top-step-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: 6rem;
+}
+.steps-components .step .top-step-container h2 {
+  color: black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.steps-components .step .illustration-container {
+  width: 25rem;
+  height: 20rem;
+}
+.steps-components .step .illustration-container img {
+  width: 100%;
+  height: auto;
+}
+.steps-components .step p {
+  text-align: center;
+  color: black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  min-height: 10rem;
+}
+.steps-components .step .step-button {
+  color: #242aa7;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+@media only screen and (min-width: 1025px) {
+  .steps-components {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .steps-components .steps-components-title {
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 2.5rem;
+    font-style: normal;
+    margin: 2rem;
+  }
+  .steps-components .step {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    width: auto;
+    height: auto;
+    background-color: rgb(230, 230, 230);
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+    flex: 1;
+  }
+  .steps-components .step .top-step-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: 6rem;
+  }
+  .steps-components .step .top-step-container h2 {
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+  }
+  .steps-components .step .illustration-container {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2rem;
+  }
+  .steps-components .step .illustration-container img {
+    width: 100%;
+    height: auto;
+  }
+  .steps-components .step p {
+    text-align: center;
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-style: normal;
+    min-height: 10rem;
+  }
+  .steps-components .step .step-button {
+    color: #242aa7;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-style: normal;
+  }
 }/*# sourceMappingURL=main.css.map */

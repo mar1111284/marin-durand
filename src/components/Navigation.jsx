@@ -65,6 +65,7 @@ const Navigation = () => {
       <div className='navbar'>
 
         <div className='logo-container'>
+          <p>Marin Durand</p>
           {/* <img src={Logo} alt="Logo Art of Gardens" className='navbar-logo'></img> */}
         </div>
 
