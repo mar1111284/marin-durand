@@ -194,6 +194,70 @@ button {
   padding: 3rem 1.8rem;
   flex: 1;
 }
+.page-container.home .step-detail {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 3rem;
+}
+.page-container.home .step-detail .step-detail-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.page-container.home .step-detail .step-detail-text h2 {
+  color: black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 2.5rem;
+  font-style: normal;
+  margin-bottom: 2rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+}
+.page-container.home .step-detail .step-detail-text h3 {
+  color: black;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-style: normal;
+  text-align: start;
+  width: 100%;
+}
+.page-container.home .step-detail .step-detail-text p {
+  color: black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  line-height: 2.8rem;
+  text-align: start;
+  width: 100%;
+}
+.page-container.home .step-detail .illustration-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
+}
+.page-container.home .step-detail .illustration-container img {
+  width: 80%;
+  height: auto;
+}
+.page-container.home .even-step {
+  background-color: rgb(240, 240, 240);
+}
 
 @media only screen and (min-width: 650px) and (max-width: 1025px) {
   .page-container.home .home-header {
@@ -278,6 +342,68 @@ button {
     gap: 0;
     padding: 3rem 1.8rem;
     flex: 1;
+  }
+  .page-container.home .step-detail {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    max-width: 85%;
+  }
+  .page-container.home .step-detail .step-detail-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .page-container.home .step-detail .step-detail-text h2 {
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 2.5rem;
+    font-style: normal;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .page-container.home .step-detail .step-detail-text h3 {
+    color: black;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-style: normal;
+    text-align: start;
+    width: 100%;
+  }
+  .page-container.home .step-detail .step-detail-text p {
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+    line-height: 2.8rem;
+    text-align: start;
+    width: 100%;
+  }
+  .page-container.home .step-detail .illustration-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  .page-container.home .step-detail .illustration-container img {
+    width: 60%;
+    height: auto;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -364,6 +490,69 @@ button {
     padding-top: 3rem;
     padding-bottom: 3rem;
     flex: 1;
+  }
+  .page-container.home .step-detail {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 70%;
+    min-height: 50rem;
+  }
+  .page-container.home .step-detail .step-detail-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .page-container.home .step-detail .step-detail-text h2 {
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 2.5rem;
+    font-style: normal;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.15rem;
+  }
+  .page-container.home .step-detail .step-detail-text h3 {
+    color: black;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 1.7rem;
+    font-style: normal;
+    text-align: start;
+    width: 100%;
+  }
+  .page-container.home .step-detail .step-detail-text p {
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 2.8rem;
+    text-align: start;
+    width: 100%;
+  }
+  .page-container.home .step-detail .illustration-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  .page-container.home .step-detail .illustration-container img {
+    width: 80%;
+    height: auto;
   }
 }
 .navigation-container {
@@ -663,14 +852,14 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
   width: 100%;
   height: 6rem;
 }
 .steps-components .step .top-step-container h2 {
   color: black;
   font-family: Poppins;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 1.8rem;
   font-style: normal;
 }
@@ -748,7 +937,7 @@ button {
   .steps-components .step .top-step-container h2 {
     color: black;
     font-family: Poppins;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 1.6rem;
     font-style: normal;
   }
@@ -776,5 +965,107 @@ button {
     font-weight: 400;
     font-size: 1.5rem;
     font-style: normal;
+  }
+}
+.aboutMe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 2rem;
+  margin: 4rem 0;
+}
+.aboutMe-container .image-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.aboutMe-container .image-container img {
+  width: 30rem;
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.aboutMe-container .text-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.aboutMe-container .text-content h2 {
+  color: black;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.aboutMe-container .text-content p {
+  color: black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  letter-spacing: 0.15rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  .aboutMe-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    max-width: 70%;
+    min-height: 40rem;
+    padding: 2rem;
+  }
+  .aboutMe-container .image-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .aboutMe-container .image-container img {
+    width: 30rem;
+    height: 30rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+  }
+  .aboutMe-container .text-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .aboutMe-container .text-content h2 {
+    color: black;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-style: normal;
+  }
+  .aboutMe-container .text-content p {
+    color: black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    letter-spacing: 0.15rem;
   }
 }/*# sourceMappingURL=main.css.map */

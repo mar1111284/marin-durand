@@ -42,6 +42,41 @@
             padding: 3rem 1.8rem
             flex: 1
 
+    .step-detail
+        @include width-height(100%,auto)
+        @include flexbox(column, flex-start, center)
+        margin-bottom: 3rem
+
+        .step-detail-text
+            @include flexbox(column, center, center, 1rem)
+            padding: 2rem 
+            h2
+                @include set-font(black,Poppins, 2.5rem, 400,normal )
+                margin-bottom: 2rem
+                letter-spacing: 0.15rem
+                text-align: center
+            h3
+                @include set-font(black,Poppins, 1.8rem, bold,normal )
+                text-align: start
+                width: 100%
+            p
+                @include set-font(black,Poppins, 1.8rem, 400,normal )
+                line-height: 2.8rem
+                text-align: start
+                width: 100%
+
+
+        .illustration-container
+            @include flexbox(row, center, center)
+            @include width-height(100%, auto)
+            padding-top: 2rem
+            img
+                @include width-height(80%, auto)
+
+    .even-step
+        background-color: rgb(240,240,240)
+
+            
 @include respond(tablet)
     .page-container.home
         .home-header
@@ -87,8 +122,38 @@
                 padding: 3rem 1.8rem
                 flex: 1
 
-            
+        .step-detail
+            @include width-height(100%,auto)
+            @include flexbox(column,center, center, 1rem)
+            margin-bottom: 3rem
+            max-width: 85%
 
+            .step-detail-text
+                width: 100%
+                @include flexbox(column, center, center, 1rem)
+                padding: 2rem 
+                h2
+                    @include set-font(black,Poppins, 2.5rem, 400,normal )
+                    margin-bottom: 2rem
+                    text-align: center
+                h3
+                    @include set-font(black,Poppins, 1.8rem, bold,normal )
+                    text-align: start
+                    width: 100%
+                p
+                    @include set-font(black,Poppins, 1.8rem, 400,normal )
+                    line-height: 2.8rem
+                    text-align: start
+                    width: 100%
+
+            .illustration-container
+                @include flexbox(row, center, center)
+                @include width-height(100%, auto)
+                padding: 0
+                img
+                    @include width-height(60%, auto)
+
+            
 @include respond(desktop)
     .page-container.home
         .home-header
@@ -135,4 +200,40 @@
                 padding-top: 3rem
                 padding-bottom: 3rem
                 flex: 1
+
+        .step-detail
+            @include width-height(100%,auto)
+            @include flexbox(row,center, center, 1rem)
+            max-width: 70%
+            min-height: 50rem
+
+            .step-detail-text
+                width: 100%
+                @include flexbox(column, center, center, 1rem)
+                padding: 2rem 
+                h2
+                    @include set-font(black,Poppins, 2.5rem, 400,normal )
+                    margin-bottom: 2rem
+                    text-align: center
+                    letter-spacing: 0.15rem
+                h3
+                    @include set-font(black,Poppins, 1.7rem, bold,normal )
+                    text-align: start
+                    width: 100%
+                p
+                    @include set-font(black,Poppins, 1.6rem, 400,normal )
+                    line-height: 2.8rem
+                    text-align: start
+                    width: 100%
+
+            .illustration-container
+                @include flexbox(row, center, center)
+                @include width-height(100%, auto)
+                padding: 0
+                img
+                    @include width-height(80%, auto)
+
+
+
+
                 
