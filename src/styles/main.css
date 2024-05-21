@@ -111,6 +111,15 @@ button {
   padding-top: 9rem;
 }
 
+.page-container .homepage {
+  background-color: red;
+}
+.page-container .homepage p {
+  font-size: 15rem;
+  background-color: red;
+  display: none;
+}
+
 .page-container.home .home-header {
   display: flex;
   flex-direction: column;
@@ -252,7 +261,7 @@ button {
   padding-top: 2rem;
 }
 .page-container.home .step-detail .illustration-container img {
-  width: 80%;
+  width: 60%;
   height: auto;
 }
 .page-container.home .even-step {
@@ -551,7 +560,7 @@ button {
     padding: 0;
   }
   .page-container.home .step-detail .illustration-container img {
-    width: 80%;
+    width: 60%;
     height: auto;
   }
 }
@@ -864,7 +873,8 @@ button {
   font-style: normal;
 }
 .steps-components .step .illustration-container {
-  width: 25rem;
+  margin-top: 2rem;
+  width: 20rem;
   height: 20rem;
 }
 .steps-components .step .illustration-container img {
@@ -973,7 +983,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  padding: 2rem;
+  padding: 3rem;
   margin: 4rem 0;
 }
 .aboutMe-container .image-container {
@@ -986,8 +996,8 @@ button {
   gap: 0;
 }
 .aboutMe-container .image-container img {
-  width: 30rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;

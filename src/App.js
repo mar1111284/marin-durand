@@ -17,6 +17,7 @@ import PrivacyAndSupport from "./pages/PrivacyAndSupport";
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Homepage from "./pages/Homepage";
 
 
 const options = {
@@ -43,7 +44,8 @@ const routes = [
     children: [
       {
         path: "/",
-        element: <Home />,
+        // element: <Home />,
+        element: <Homepage/>
       },
       {
         path: "/services",
