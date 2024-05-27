@@ -1,21 +1,18 @@
 {
   "files": {
-    "main.css": "/marin-durand/static/css/main.93fea176.css",
-    "main.js": "/marin-durand/static/js/main.02108e6b.js",
+    "main.css": "/marin-durand/static/css/main.a361ca69.css",
+    "main.js": "/marin-durand/static/js/main.3e3c96da.js",
     "static/js/453.d4ca5cd4.chunk.js": "/marin-durand/static/js/453.d4ca5cd4.chunk.js",
-    "static/media/header-bg.jpg": "/marin-durand/static/media/header-bg.b3b20e8037a53a36b458.jpg",
-    "static/media/header-mockup.png": "/marin-durand/static/media/header-mockup.bbc6f9995cf9ff96cf25.png",
-    "static/media/step2.svg": "/marin-durand/static/media/step2.e7fd0478451b8d72ff9b93b1ea475b66.svg",
-    "static/media/step1.svg": "/marin-durand/static/media/step1.2e4a057b61e2034aa921006c6c3756f7.svg",
-    "static/media/step4.svg": "/marin-durand/static/media/step4.ee67c4d97d43c103242f4db5b15cd0f5.svg",
-    "static/media/step3.svg": "/marin-durand/static/media/step3.d9111c7b4b16e0658a307d63e7b72e42.svg",
+    "static/media/profile.png": "/marin-durand/static/media/profile.f94b99b92208f7c7bb6f.png",
+    "static/media/soft_black_version.png": "/marin-durand/static/media/soft_black_version.84bf776bbc32d9f9ec98.png",
+    "static/media/Monoton-Regular.ttf": "/marin-durand/static/media/Monoton-Regular.19a7118aa5d6dd29470f.ttf",
     "index.html": "/marin-durand/index.html",
-    "main.93fea176.css.map": "/marin-durand/static/css/main.93fea176.css.map",
-    "main.02108e6b.js.map": "/marin-durand/static/js/main.02108e6b.js.map",
+    "main.a361ca69.css.map": "/marin-durand/static/css/main.a361ca69.css.map",
+    "main.3e3c96da.js.map": "/marin-durand/static/js/main.3e3c96da.js.map",
     "453.d4ca5cd4.chunk.js.map": "/marin-durand/static/js/453.d4ca5cd4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93fea176.css",
-    "static/js/main.02108e6b.js"
+    "static/css/main.a361ca69.css",
+    "static/js/main.3e3c96da.js"
   ]
 }
