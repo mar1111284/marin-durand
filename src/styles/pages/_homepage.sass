@@ -1,6 +1,189 @@
-.page-container .homepage
-    background-color: red
-    p
-        font-size: 15rem
-        background-color: red
-        display: none
+.homepage
+    @include flexbox(column, center, center)
+    @include width-height(100vw, 100%)
+
+    .home-content-container
+        @include flexbox(column, space-between, center, 4rem)
+        @include width-height(100%, 100%)
+        padding: 9rem 2rem 0
+        background: rgb(47,44,44)
+        background: linear-gradient(0deg, rgba(47,44,44,1) 0%, rgba(0,0,0,1) 100%)
+        min-height: 100vh
+        
+        // HOME MAIN TEXT CONTAINER
+        .home-text-container
+            @include width-height(100%, auto)
+            @include flexbox(column, space-between, center, 4rem)
+
+            .title-container
+
+                h1
+                    @include width-height(100%, auto)
+                    @include set-font(white,Josefin Sans, 5rem, 300,normal )
+                    background-color: transparent
+                    text-align: center
+                    padding-top: 3rem
+
+                h2
+                    @include width-height(100%, auto)
+                    @include set-font(white,Josefin Sans, 2.2rem, 400,normal )
+                    background-color: transparent
+                    letter-spacing: 0.15rem
+                    text-align: end
+                    margin-top: 1rem
+
+            p
+                @include width-height(100%, auto)
+                @include set-font(white,Josefin Sans, 2rem, 400,italic )
+                line-height: 3.5rem
+                letter-spacing: 0.15rem
+                text-align: center
+
+            // HERO IMAGE
+            .home-hero-container
+                @include width-height(20rem,20rem)
+
+                img
+                    transform: rotate(+10deg)
+                    width: 100%
+                    border-radius: 50%
+                    background: rgb(217,195,195)
+                    background: linear-gradient(59deg, rgba(217,195,195,1) 0%, rgba(255,255,255,1) 63%)
+                    object-fit: cover
+        
+        // ICONS CONTAINER
+        .icons-container
+            @include width-height(100%, auto)
+            @include flexbox(row, center, center, 2rem)
+
+            img
+                @include width-height(8rem, auto)
+
+        // NAV CONTAINER
+        .home-nav-container
+            @include flexbox(row, center, center, 0.5rem)
+            flex-wrap: wrap
+            flex-grow: 1
+            padding-bottom: 4rem
+            height: 100px
+
+            .home-link
+                text-decoration: none
+                cursor: pointer
+                @include set-font(white,Josefin Sans, 1.8rem, 400,normal )
+                line-height: 2rem
+            span
+                @include set-font(white,Josefin Sans, 1.8rem, 300,normal )
+
+    .qrcode-container
+        @include width-height(100%, auto)
+        @include flexbox(column, center, center, 2rem)
+        background: rgb(190,180,180)
+        background: linear-gradient(59deg, rgba(190,180,180,1) 0%, rgba(255,255,255,1) 63%)
+        padding: 3rem 0 2rem
+
+        p
+            @include set-font(rgb(33,33,33),Josefin Sans, 3rem, 400,normal )
+
+        .qr-card
+            @include width-height(32rem, auto)
+            @include flexbox(column, flex-start, center, 1.5rem)
+            box-shadow: -3px 11px 45px -6px rgba(0,0,0,0.6)
+            background-color: whitesmoke
+            padding: 4rem 3rem
+            border-radius: 6px
+
+            .qr-label
+                @include flexbox(column, center, center, 0.5rem)
+                p
+                    @include set-font(rgb(33,33,33),Josefin Sans, 2rem, bold,normal )
+                    text-transform: uppercase
+            img
+                width: 100%
+                object-fit: cover
+    
+@include respond(desktop)
+    .homepage
+        @include flexbox(row, center, center)
+
+        .home-content-container
+            height: 100vh
+            @include flexbox(column, space-between, center, 2rem)
+            padding: 9rem 5rem 0
+            
+            // HOME MAIN TEXT CONTAINER
+            .home-text-container
+                gap: 5rem
+                .title-container
+                    align-self: flex-end 
+
+                    h1
+                        @include set-font(white,Josefin Sans, 6rem, 300,normal )
+
+                    h2
+                        @include set-font(white,Josefin Sans, 2.5rem, 400,normal )
+
+                p
+                    @include width-height(100%, auto)
+                    @include set-font(white,Josefin Sans, 2rem, 400,italic)
+                    line-height: 3.5rem
+                    letter-spacing: 0.15rem
+                    text-align: start 
+                    max-width: 80%
+                    align-self: start
+
+                // HERO IMAGE
+                .home-hero-container
+                    @include width-height(32rem,32rem)
+            
+            // ICONS CONTAINER
+            .icons-container
+                @include width-height(100%, auto)
+                @include flexbox(row, flex-start, center, 2rem)
+
+                img
+                    @include width-height(8rem, auto)
+
+            // NAV CONTAINER
+            .home-nav-container
+                @include flexbox(row, center, center, 1.5rem)
+                flex-wrap: wrap
+                flex-grow: 1
+                padding-bottom: 2rem
+                height: 100px
+
+                .home-link
+                    text-decoration: none
+                    cursor: pointer
+                    @include set-font(white,Josefin Sans, 1.8rem, 400,normal )
+                    line-height: 2rem
+                span
+                    @include set-font(white,Josefin Sans, 1.8rem, 300,normal )
+
+        .qrcode-container
+            @include width-height(100%,100vh)
+            background: rgb(190,180,180)
+            background: linear-gradient(59deg, rgba(190,180,180,1) 0%, rgba(255,255,255,1) 63%)
+            padding: 0
+            gap: 4rem
+
+            p
+                @include set-font(rgb(33,33,33),Josefin Sans, 3rem, 400,normal )
+                letter-spacing: 0.15rem
+
+            .qr-card
+                @include width-height(32rem, auto)
+                @include flexbox(column, flex-start, center, 1.5rem)
+                box-shadow: -3px 11px 45px -6px rgba(0,0,0,0.6)
+                background-color: whitesmoke
+                padding: 4rem 3rem
+                border-radius: 6px
+
+                .qr-label
+                    @include flexbox(column, center, center, 0.5rem)
+                    p
+                        @include set-font(rgb(33,33,33),Josefin Sans, 2rem, bold,normal )
+                        text-transform: uppercase
+                img
+                    width: 100%
+                    object-fit: cover

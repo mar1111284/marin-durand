@@ -2,6 +2,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat+Subrayada&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@keyframes spinAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+@font-face {
+  font-family: "Monoton Regular";
+  src: url("../fonts/Monoton-Regular.ttf") format("truetype");
+}
 * {
   box-sizing: border-box;
   cursor: default;
@@ -90,15 +122,6 @@ button {
   color: #075722;
 }
 
-.separator {
-  content: "";
-  width: 10rem;
-  height: 0.2rem;
-  background-color: rgba(33, 33, 33, 0.8);
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
 .page-container {
   width: 100vw;
   height: 100%;
@@ -108,19 +131,12 @@ button {
   align-items: center;
   gap: 0;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
   padding-top: 9rem;
 }
 
-.page-container .homepage {
-  background-color: red;
-}
-.page-container .homepage p {
-  font-size: 15rem;
-  background-color: red;
-  display: none;
-}
-
-.page-container.home .home-header {
+.homepage {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,440 +144,445 @@ button {
   gap: 0;
   width: 100vw;
   height: 100%;
-  flex: 1;
 }
-.page-container.home .home-header .top-header {
+.homepage .home-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/header-bg.jpg");
-  background-position: center;
-  background-size: cover;
+  padding: 9rem 2rem 0;
+  background: rgb(47, 44, 44);
+  background: linear-gradient(0deg, rgb(47, 44, 44) 0%, rgb(0, 0, 0) 100%);
+  min-height: 100vh;
+}
+.homepage .home-content-container .home-text-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+.homepage .home-content-container .home-text-container .title-container h1 {
+  width: 100%;
+  height: auto;
+  color: white;
+  font-family: Josefin Sans;
+  font-weight: 300;
+  font-size: 5rem;
+  font-style: normal;
+  background-color: transparent;
+  text-align: center;
+  padding-top: 3rem;
+}
+.homepage .home-content-container .home-text-container .title-container h2 {
+  width: 100%;
+  height: auto;
+  color: white;
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-size: 2.2rem;
+  font-style: normal;
+  background-color: transparent;
+  letter-spacing: 0.15rem;
+  text-align: end;
+  margin-top: 1rem;
+}
+.homepage .home-content-container .home-text-container p {
+  width: 100%;
+  height: auto;
+  color: white;
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 3.5rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+}
+.homepage .home-content-container .home-text-container .home-hero-container {
+  width: 20rem;
+  height: 20rem;
+}
+.homepage .home-content-container .home-text-container .home-hero-container img {
+  transform: rotate(10deg);
+  width: 100%;
+  border-radius: 50%;
+  background: rgb(217, 195, 195);
+  background: linear-gradient(59deg, rgb(217, 195, 195) 0%, rgb(255, 255, 255) 63%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage .home-content-container .icons-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.homepage .home-content-container .icons-container img {
+  width: 8rem;
+  height: auto;
+}
+.homepage .home-content-container .home-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding-bottom: 4rem;
+  height: 100px;
+}
+.homepage .home-content-container .home-nav-container .home-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  line-height: 2rem;
+}
+.homepage .home-content-container .home-nav-container span {
+  color: white;
+  font-family: Josefin Sans;
+  font-weight: 300;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.homepage .qrcode-container {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
-  flex: 1;
-  padding: 4rem 2.5rem;
+  gap: 2rem;
+  background: rgb(190, 180, 180);
+  background: linear-gradient(59deg, rgb(190, 180, 180) 0%, rgb(255, 255, 255) 63%);
+  padding: 3rem 0 2rem;
 }
-.page-container.home .home-header .top-header .header-left-container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2.25rem;
-}
-.page-container.home .home-header .top-header .header-left-container h1 {
-  color: white;
-  font-family: Poppins;
-  font-weight: bold;
-  font-size: 3.25rem;
-  font-style: normal;
-  line-height: 4rem;
-}
-.page-container.home .home-header .top-header .header-left-container h1 span {
-  color: white;
-  font-family: Poppins;
-  font-weight: bold;
-  font-size: 3.25rem;
-  font-style: normal;
-  color: black;
-}
-.page-container.home .home-header .top-header .header-left-container h2 {
-  color: White;
-  font-family: Poppins;
+.homepage .qrcode-container p {
+  color: rgb(33, 33, 33);
+  font-family: Josefin Sans;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-style: normal;
-  letter-spacing: 0.1rem;
 }
-.page-container.home .home-header .top-header .header-left-container .get-in-touch-btn {
-  background-color: #1e25a5;
-  padding: 1rem 1.5rem;
-  color: White;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 1.8rem;
-  font-style: normal;
-  border-radius: 4px;
-  align-self: center;
-}
-.page-container.home .home-header .top-header .header-mockup {
-  width: 100%;
-  height: auto;
-}
-.page-container.home .home-header .bottom-header {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0;
-  padding: 3rem 1.8rem;
-  flex: 1;
-}
-.page-container.home .step-detail {
-  width: 100%;
+.homepage .qrcode-container .qr-card {
+  width: 32rem;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 0;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  box-shadow: -3px 11px 45px -6px rgba(0, 0, 0, 0.6);
+  background-color: whitesmoke;
+  padding: 4rem 3rem;
+  border-radius: 6px;
 }
-.page-container.home .step-detail .step-detail-text {
+.homepage .qrcode-container .qr-card .qr-label {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem;
+  gap: 0.5rem;
 }
-.page-container.home .step-detail .step-detail-text h2 {
-  color: black;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 2.5rem;
+.homepage .qrcode-container .qr-card .qr-label p {
+  color: rgb(33, 33, 33);
+  font-family: Josefin Sans;
+  font-weight: bold;
+  font-size: 2rem;
   font-style: normal;
-  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.homepage .qrcode-container .qr-card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (min-width: 1025px) {
+  .homepage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .homepage .home-content-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 9rem 5rem 0;
+  }
+  .homepage .home-content-container .home-text-container {
+    gap: 5rem;
+  }
+  .homepage .home-content-container .home-text-container .title-container {
+    align-self: flex-end;
+  }
+  .homepage .home-content-container .home-text-container .title-container h1 {
+    color: white;
+    font-family: Josefin Sans;
+    font-weight: 300;
+    font-size: 6rem;
+    font-style: normal;
+  }
+  .homepage .home-content-container .home-text-container .title-container h2 {
+    color: white;
+    font-family: Josefin Sans;
+    font-weight: 400;
+    font-size: 2.5rem;
+    font-style: normal;
+  }
+  .homepage .home-content-container .home-text-container p {
+    width: 100%;
+    height: auto;
+    color: white;
+    font-family: Josefin Sans;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 3.5rem;
+    letter-spacing: 0.15rem;
+    text-align: start;
+    max-width: 80%;
+    align-self: start;
+  }
+  .homepage .home-content-container .home-text-container .home-hero-container {
+    width: 32rem;
+    height: 32rem;
+  }
+  .homepage .home-content-container .icons-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+  .homepage .home-content-container .icons-container img {
+    width: 8rem;
+    height: auto;
+  }
+  .homepage .home-content-container .home-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding-bottom: 2rem;
+    height: 100px;
+  }
+  .homepage .home-content-container .home-nav-container .home-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-family: Josefin Sans;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+    line-height: 2rem;
+  }
+  .homepage .home-content-container .home-nav-container span {
+    color: white;
+    font-family: Josefin Sans;
+    font-weight: 300;
+    font-size: 1.8rem;
+    font-style: normal;
+  }
+  .homepage .qrcode-container {
+    width: 100%;
+    height: 100vh;
+    background: rgb(190, 180, 180);
+    background: linear-gradient(59deg, rgb(190, 180, 180) 0%, rgb(255, 255, 255) 63%);
+    padding: 0;
+    gap: 4rem;
+  }
+  .homepage .qrcode-container p {
+    color: rgb(33, 33, 33);
+    font-family: Josefin Sans;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+    letter-spacing: 0.15rem;
+  }
+  .homepage .qrcode-container .qr-card {
+    width: 32rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: -3px 11px 45px -6px rgba(0, 0, 0, 0.6);
+    background-color: whitesmoke;
+    padding: 4rem 3rem;
+    border-radius: 6px;
+  }
+  .homepage .qrcode-container .qr-card .qr-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .homepage .qrcode-container .qr-card .qr-label p {
+    color: rgb(33, 33, 33);
+    font-family: Josefin Sans;
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .homepage .qrcode-container .qr-card img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100vw;
+  height: 100%;
+}
+.contact .contact-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  height: 100%;
+  padding: 12rem 3rem 4rem;
+  background: rgb(47, 44, 44);
+  background: linear-gradient(0deg, rgb(47, 44, 44) 0%, rgb(0, 0, 0) 100%);
+}
+.contact .contact-info-container h1 {
+  width: 100%;
+  height: auto;
+  color: white;
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-size: 5rem;
+  font-style: normal;
   letter-spacing: 0.15rem;
+  background-color: transparent;
   text-align: center;
 }
-.page-container.home .step-detail .step-detail-text h3 {
-  color: black;
-  font-family: Poppins;
+.contact .contact-info-container .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  height: auto;
+  max-width: 70rem;
+}
+.contact .contact-info-container .infos p {
+  color: white;
+  font-family: Josefin Sans;
+  font-weight: 300;
+  font-size: 2.2rem;
+  font-style: normal;
+  letter-spacing: 0.15rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.contact .contact-info-container .infos .info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.contact .contact-info-container .infos .info-container p {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.contact .contact-info-container .infos .info-container p span {
+  color: white;
+  font-family: Josefin Sans;
   font-weight: bold;
   font-size: 1.8rem;
   font-style: normal;
-  text-align: start;
-  width: 100%;
 }
-.page-container.home .step-detail .step-detail-text p {
-  color: black;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 1.8rem;
-  font-style: normal;
-  line-height: 2.8rem;
-  text-align: start;
-  width: 100%;
+.contact .contact-info-container .infos .info-container img {
+  width: 4rem;
+  height: auto;
 }
-.page-container.home .step-detail .illustration-container {
+.contact .contact-info-container .double-arrow-container {
+  margin-bottom: 4rem;
+  flex-grow: 1;
+  width: 10rem;
+  transform: rotate(180deg);
+}
+.contact .contact-form-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 100%;
-  height: auto;
-  padding-top: 2rem;
-}
-.page-container.home .step-detail .illustration-container img {
-  width: 60%;
-  height: auto;
-}
-.page-container.home .even-step {
-  background-color: rgb(240, 240, 240);
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1025px) {
-  .page-container.home .home-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    width: 100vw;
-    height: 100%;
-    flex: 1;
-  }
-  .page-container.home .home-header .top-header {
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/header-bg.jpg");
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    flex: 1;
-    padding: 4% 8%;
-  }
-  .page-container.home .home-header .top-header .header-left-container {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2.25rem;
-  }
-  .page-container.home .home-header .top-header .header-left-container h1 {
-    color: white;
-    font-family: Poppins;
-    font-weight: bold;
-    font-size: 4rem;
-    font-style: normal;
-    line-height: 4rem;
-  }
-  .page-container.home .home-header .top-header .header-left-container h1 span {
-    color: white;
-    font-family: Poppins;
-    font-weight: bold;
-    font-size: 4.25rem;
-    font-style: normal;
-    color: black;
-  }
-  .page-container.home .home-header .top-header .header-left-container h2 {
-    color: White;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 2.2rem;
-    font-style: normal;
-    letter-spacing: 0.1rem;
-  }
-  .page-container.home .home-header .top-header .header-left-container .get-in-touch-btn {
-    background-color: #1e25a5;
-    padding: 1rem 1.5rem;
-    color: White;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 1.8rem;
-    font-style: normal;
-    border-radius: 4px;
-    align-self: flex-start;
-  }
-  .page-container.home .home-header .top-header .header-mockup {
-    width: 100%;
-    height: auto;
-  }
-  .page-container.home .home-header .bottom-header {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0;
-    padding: 3rem 1.8rem;
-    flex: 1;
-  }
-  .page-container.home .step-detail {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    max-width: 85%;
-  }
-  .page-container.home .step-detail .step-detail-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem;
-  }
-  .page-container.home .step-detail .step-detail-text h2 {
-    color: black;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 2.5rem;
-    font-style: normal;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  .page-container.home .step-detail .step-detail-text h3 {
-    color: black;
-    font-family: Poppins;
-    font-weight: bold;
-    font-size: 1.8rem;
-    font-style: normal;
-    text-align: start;
-    width: 100%;
-  }
-  .page-container.home .step-detail .step-detail-text p {
-    color: black;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 1.8rem;
-    font-style: normal;
-    line-height: 2.8rem;
-    text-align: start;
-    width: 100%;
-  }
-  .page-container.home .step-detail .illustration-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    width: 100%;
-    height: auto;
-    padding: 0;
-  }
-  .page-container.home .step-detail .illustration-container img {
-    width: 60%;
-    height: auto;
-  }
-}
 @media only screen and (min-width: 1025px) {
-  .page-container.home .home-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    width: 100vw;
-    height: 100%;
-    flex: 1;
-  }
-  .page-container.home .home-header .top-header {
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/header-bg.jpg");
-    background-position: center;
-    background-size: cover;
+  .contact {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    flex: 1;
-    padding: 4% 15%;
+    gap: 0;
   }
-  .page-container.home .home-header .top-header .header-left-container {
+  .contact .contact-info-container {
     width: 50%;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 2rem;
   }
-  .page-container.home .home-header .top-header .header-left-container h1 {
+  .contact .contact-info-container h1 {
     color: white;
-    font-family: Poppins;
-    font-weight: bold;
-    font-size: 4rem;
+    font-family: Josefin Sans;
+    font-weight: 400;
+    font-size: 10rem;
     font-style: normal;
-    line-height: 5.8rem;
   }
-  .page-container.home .home-header .top-header .header-left-container h1 span {
-    color: white;
-    font-family: Poppins;
-    font-weight: bold;
-    font-size: 4.5rem;
-    font-style: normal;
-    color: #3b43d6;
-  }
-  .page-container.home .home-header .top-header .header-left-container h2 {
-    color: White;
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 2rem;
-    font-style: normal;
-    letter-spacing: 0.1rem;
-  }
-  .page-container.home .home-header .top-header .header-left-container .get-in-touch-btn {
-    background-color: #1e25a5;
-    padding: 1.25rem 2rem;
-    color: White;
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 1.8rem;
-    font-style: normal;
-    border-radius: 4px;
-    align-self: flex-start;
-  }
-  .page-container.home .home-header .top-header .header-mockup {
+  .contact .contact-form-container {
     width: 50%;
-    height: auto;
-  }
-  .page-container.home .home-header .bottom-header {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    flex: 1;
-  }
-  .page-container.home .step-detail {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    max-width: 70%;
-    min-height: 50rem;
-  }
-  .page-container.home .step-detail .step-detail-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem;
-  }
-  .page-container.home .step-detail .step-detail-text h2 {
-    color: black;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 2.5rem;
-    font-style: normal;
-    margin-bottom: 2rem;
-    text-align: center;
-    letter-spacing: 0.15rem;
-  }
-  .page-container.home .step-detail .step-detail-text h3 {
-    color: black;
-    font-family: Poppins;
-    font-weight: bold;
-    font-size: 1.7rem;
-    font-style: normal;
-    text-align: start;
-    width: 100%;
-  }
-  .page-container.home .step-detail .step-detail-text p {
-    color: black;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 1.6rem;
-    font-style: normal;
-    line-height: 2.8rem;
-    text-align: start;
-    width: 100%;
-  }
-  .page-container.home .step-detail .illustration-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    width: 100%;
-    height: auto;
-    padding: 0;
-  }
-  .page-container.home .step-detail .illustration-container img {
-    width: 60%;
-    height: auto;
+    height: 100vh;
   }
 }
 .navigation-container {
@@ -623,9 +644,9 @@ button {
 }
 .navigation-container .navbar .logo-container p {
   color: Black;
-  font-family: Poppins;
+  font-family: Josefin Sans;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-style: normal;
   margin-left: 2rem;
 }
@@ -650,7 +671,7 @@ button {
   width: 100%;
   height: 5rem;
   color: black;
-  font-family: Poppins;
+  font-family: Josefin Sans;
   font-weight: 400;
   font-size: 2rem;
   font-style: normal;
@@ -754,7 +775,7 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3.8rem;
     width: auto;
     height: 100%;
     padding: 0;
@@ -1077,5 +1098,105 @@ button {
     font-size: 1.6rem;
     font-style: normal;
     letter-spacing: 0.15rem;
+  }
+}
+.form-container {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 65rem;
+  min-height: 65rem;
+  padding: 2rem 2rem 8rem;
+}
+.form-container h2 {
+  color: #222425;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 2.2rem;
+  font-style: normal;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.form-container .form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.form-container .form .form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  height: 7.5rem;
+}
+.form-container .form .form-input label {
+  color: black;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.form-container .form .form-input input {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0.1rem solid black;
+  width: 100%;
+  height: 3.8rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.form-container .form .form-input textArea {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0.1rem solid black;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+.form-container .form .double-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 10rem;
+}
+.form-container .form .double-input-container .form-input {
+  width: 100%;
+}
+.form-container .form .form-button {
+  color: white;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  background-color: #1f8fa9;
+  padding: 1rem 2rem;
+  letter-spacing: 0.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  border-style: none;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  .form-container {
+    margin-top: 9rem;
+    max-width: 65rem;
+    max-height: 50rem;
   }
 }/*# sourceMappingURL=main.css.map */

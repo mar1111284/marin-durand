@@ -1,0 +1,67 @@
+.contact
+    @include flexbox(column, center, center)
+    @include width-height(100vw, 100%)
+
+    .contact-info-container
+        @include flexbox(column, flex-start, center, 4rem)
+        @include width-height(100%, 100%)
+        padding: 12rem 3rem 4rem
+        background: rgb(47,44,44)
+        background: linear-gradient(0deg, rgba(47,44,44,1) 0%, rgba(0,0,0,1) 100%)
+
+        h1
+            @include width-height(100%, auto)
+            @include set-font(white,Josefin Sans, 5rem, 400,normal )
+            letter-spacing: 0.15rem
+            background-color: transparent
+            text-align: center
+
+        .infos
+            @include flexbox(column, flex-start, center, 2.5rem)
+            @include width-height(100%, auto)
+            max-width: 70rem
+
+            p
+                @include set-font(white,Josefin Sans, 2.2rem, 300,normal )
+                letter-spacing: 0.15rem
+                line-height: 3rem
+                margin-bottom: 2rem
+                text-align: center
+
+            .info-container
+                @include flexbox(row, flex-start, center, 2rem)
+                @include width-height(100%, 100%)
+
+                p
+                    padding: 0
+                    margin: 0
+                    @include set-font(white,Josefin Sans, 1.8rem, 400,normal )
+                    span
+                     @include set-font(white,Josefin Sans, 1.8rem, bold,normal )
+
+                img
+                    @include width-height(4rem, auto)
+        .double-arrow-container
+            margin-bottom: 4rem
+            flex-grow: 1
+            .double-arrow
+            width: 10rem
+            transform: rotate(180deg)
+
+    .contact-form-container
+        @include width-height(100%,100%)
+        @include flexbox(row, center, center)
+
+@include respond(desktop)
+    .contact
+        @include flexbox(row, center, center)
+
+        .contact-info-container
+            @include width-height(50%, 100vh)
+            @include flexbox(column, center, center, 2rem)
+
+            h1
+                @include set-font(white,Josefin Sans, 10rem, 400,normal )
+
+        .contact-form-container
+            @include width-height(50%, 100vh)

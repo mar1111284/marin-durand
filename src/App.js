@@ -6,22 +6,22 @@ import {
 } from "react-router-dom";
 
 // Pages
-import Home from './pages/Home';
-import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Error from './pages/Error';
 import About from './pages/About';
 import PrivacyAndSupport from "./pages/PrivacyAndSupport";
+import Projects from "./pages/Projects";
+import Homepage from "./pages/Homepage";
+
 
 // Components
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import Homepage from "./pages/Homepage";
 
 
 const options = {
-  basename: "/",
+  basename: "/marin-durand",
 };
 
 // Layout
@@ -44,12 +44,7 @@ const routes = [
     children: [
       {
         path: "/",
-        // element: <Home />,
-        element: <Homepage/>
-      },
-      {
-        path: "/services",
-        element: <Services />,
+        element: <Homepage/>,
       },
       {
         path: "/contact",
@@ -62,6 +57,10 @@ const routes = [
       {
         path: "/privacy",
         element: <PrivacyAndSupport />,
+      },
+      {
+        path: "/projects",
+        element: <Projects/>,
       },
     ],
   },

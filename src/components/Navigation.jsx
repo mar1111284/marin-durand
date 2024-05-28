@@ -71,20 +71,20 @@ const Navigation = () => {
 
 
         <div className={`links-container ${navbarExpand && screenWidth <= 480 ? "expand" : ""}`}>
-        <Link className='link' to="/" onClick={navbarExpand ? handleToggle : null}>
-          Home
-          <div className={location.pathname === '/' ? 'selector selected' : 'selector'}></div>
-        </Link>
-          <Link className='link' to="/services" onClick={navbarExpand ? handleToggle : null}>
-            Services
-            <div className={location.pathname === '/services' ? 'selector selected' : 'selector'}></div>
+          <Link className='link' to="/" onClick={navbarExpand ? handleToggle : null}>
+            Home
+            <div className={location.pathname === '/' ? 'selector selected' : 'selector'}></div>
+          </Link>
+          <Link className='link' to="/projects" onClick={navbarExpand ? handleToggle : null}>
+            Projects
+            <div className={location.pathname === '/projects' ? 'selector selected' : 'selector'}></div>
           </Link>
           <Link className='link' to="/contact"onClick={navbarExpand ? handleToggle : null}>
-            Contact Us
+            Contact Me
             <div className={location.pathname === '/contact' ? 'selector selected' : 'selector'}></div>
           </Link>
           <Link className='link' to="/about"onClick={navbarExpand ? handleToggle : null}>
-            About Us
+            About Me
             <div className={location.pathname === '/about' ? 'selector selected' : 'selector'}></div>
           </Link>
         </div>
